@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Receiver {
     static void run() throws IOException {
         FileInputStream fis = new FileInputStream(new File("write.tech"));
-        PeerUpdateOuterClass.PeerUpdate update = PeerUpdateOuterClass.PeerUpdate.parseFrom(fis);
+        PeerUpdateProtos.PeerUpdate update = PeerUpdateProtos.PeerUpdate.parseFrom(fis);
         System.out.println(update);
         fis.close();
     }

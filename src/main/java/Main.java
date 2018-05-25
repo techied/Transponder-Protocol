@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        PeerUpdateOuterClass.PeerUpdate update = PeerUpdateOuterClass.PeerUpdate.newBuilder().setId("0").setLat(0.1).setLong(0.1).setTime(System.currentTimeMillis()).setSignalStrength(9000.01f).setDeviceType("Testing").setBattery(0.46).build();
+        PeerUpdateProtos.PeerUpdate update = PeerUpdateProtos.PeerUpdate.newBuilder().setId("0").setLatitude(0.1).setLongitude(0.1).setTime(System.currentTimeMillis()).setSignalStrength(9000.01f).setDeviceType("Testing").setBattery(0.46).build();
         if (!update.isInitialized()) {
             System.out.println("Error: not initialized\n" + update);
         }
